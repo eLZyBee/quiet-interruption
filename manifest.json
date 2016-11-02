@@ -1,0 +1,24 @@
+{
+  "name" : "QuietInterruption",
+  "version" : "1.0",
+  "manifest_version" : 2,
+  "description" : "Mutes unwanted sound from adverts playing on video and music streaming services.",
+  "icons" : {
+    "16" : "QI_icon_16.png",
+    "48" : "QI_icon_48.png",
+    "128" : "QI_icon_128.png"
+  },
+  "background" : "background.js",
+  "content_scripts" : [
+    {
+      "matches" : ["*://*.youtube.com/watch*"],
+      "css" : ["style.css"],
+      "js" : ["script.js"]
+    }
+  ],
+  "browser_action" : {
+    "default_title" : "QuietInterruption",
+    "default_icon" : "QI_icon_16.png"
+  },
+  "permissions" : ["tabs", "*://*.youtube.com/watch*"]
+}
