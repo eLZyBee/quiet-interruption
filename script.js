@@ -2,6 +2,7 @@ console.log("The script is injected.");
 if (adMuteInterval) {
   clearInterval(adMuteInterval);
 }
+
 var adIsPlaying = false;
 var toListen = document.getElementById('movie_player');
 
@@ -10,8 +11,7 @@ var adMuteInterval = setInterval(function() {
   vid.setAttribute('id', 'quiet-please');
 
   if (toListen.className.includes('ad-interrupting')) {
-    // if (!adIsPlaying) {
-    if (true && !vid.muted) {
+    if (!vid.muted) {
       console.log('An AD started playing!');
       adIsPlaying = true;
       vid.muted = true;
