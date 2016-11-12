@@ -7,7 +7,7 @@ QI works for the following sites:
 
 Video:
   - [x] Youtube
-  - [ ] Twitch
+  - [x] Twitch
   - [ ] Hulu
 
 Audio:
