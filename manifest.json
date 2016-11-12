@@ -13,12 +13,17 @@
     {
       "matches" : ["*://*.youtube.com/watch*"],
       "css" : ["style.css"],
-      "js" : ["script.js"]
+      "js" : ["youtubeScript.js"]
+    },
+    {
+      "matches" : ["*://*.twitch.tv/*"],
+      "css" : ["style.css"],
+      "js" : ["twitchScript.js"]
     }
   ],
   "browser_action" : {
     "default_title" : "QuietInterruption",
     "default_icon" : "QI_icon_16.png"
   },
-  "permissions" : ["tabs", "*://*.youtube.com/watch*"]
+  "permissions" : ["tabs"]
 }

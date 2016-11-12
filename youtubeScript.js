@@ -1,4 +1,5 @@
-console.log("The script is injected.");
+console.log("The youtube script is injected.");
+
 if (adMuteInterval) {
   clearInterval(adMuteInterval);
 }
@@ -14,13 +15,21 @@ var adMuteInterval = setInterval(function() {
     if (!vid.muted) {
       console.log('An AD started playing!');
       adIsPlaying = true;
-      vid.muted = true;
+      mute(vid);
     }
   } else {
     if (adIsPlaying) {
       console.log('An AD just stopped');
       adIsPlaying = false;
-      vid.muted = false;
+      unmute(vid)
     }
   }
 }, 300);
+
+function mute(video) {
+  video.muted = true;
+}
+
+function unmute(video) {
+  video.muted = false;
+}
